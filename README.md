@@ -47,7 +47,6 @@ http://127.0.0.1:7860
 
 📂 Project Structure
 
-📁 CHATBOT
 
 │── App.py                # Main Gradio app
 
