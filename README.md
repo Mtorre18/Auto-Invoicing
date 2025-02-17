@@ -32,13 +32,17 @@ curl -fsSL https://ollama.com/install.sh | sh
 
 Download the AI model (if required):
 
+```sh
 ollama pull llama3
+```
 
 
 ### 3️⃣ Run the Gradio App
 
 Run the application locally:
+```sh
 python App.py
+```
 The app will open in your browser at:
 
 http://127.0.0.1:7860
