@@ -34,7 +34,7 @@ curl -fsSL https://ollama.com/install.sh | sh
 
 Download the AI model (if required):
 
-ollama pull llama3
+ollama pull qwen2.5:0.5b (no gpu required)
 
 
 3️⃣ Run the Gradio App
