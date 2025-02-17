@@ -1,6 +1,6 @@
 # 🧾 AI-Powered Invoice Verification & Processing for ERP Systems
 
-A simple AI-driven application to verify and process invoices using **Gradio** & **Ollama**.
+A simple AI-driven application to verify and process invoices using  **Docling**, **Gradio** & **Ollama**.
 
 ## 🚀 Features
 
