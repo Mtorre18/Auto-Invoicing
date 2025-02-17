@@ -1,30 +1,28 @@
-📄 AI-Powered Invoice Verification & Processing for ERP Systems
+# 🧾 AI-Powered Invoice Verification & Processing for ERP Systems
 
-A simple AI-driven application to verify and process invoices using Gradio & Ollama.
+A simple AI-driven application to verify and process invoices using **Gradio** & **Ollama**.
 
-🚀 Features:
+## 🚀 Features
 
-✅ Upload Invoices (PDF format).
+- ✅ Upload **Invoices (PDF format)**.
+- ✅ **AI-powered invoice extraction & verification**.
+- ✅ **User confirmation** before posting the invoice.
+- ✅ **Seamless ERP Integration** via API for automated invoice posting.
 
-✅ AI-powered invoice extraction & verification.
+---
 
-✅ User confirmation before posting the invoice.
+## 🔧 Installation & Setup
 
-✅ Integrates with ERP via API for automated invoice posting.
-
-
-
-
-🔧 Installation & Setup
-
-1️⃣ Install Dependencies
-
+### 1️⃣ Install Dependencies
 Before running the app, install the required Python packages:
 
+```sh
 pip install gradio ollama python-dotenv requests langchain-text-splitters docling
 
+```
 
-2️⃣ Set Up Ollama
+
+### 2️⃣ Set Up Ollama
 
 If you haven’t installed Ollama, follow these steps:
 
@@ -34,10 +32,10 @@ curl -fsSL https://ollama.com/install.sh | sh
 
 Download the AI model (if required):
 
-ollama pull qwen2.5:0.5b (no gpu required)
+ollama pull llama3
 
 
-3️⃣ Run the Gradio App
+### 3️⃣ Run the Gradio App
 
 Run the application locally:
 python App.py
@@ -47,6 +45,7 @@ http://127.0.0.1:7860
 
 📂 Project Structure
 
+📁 CHATBOT
 
 │── App.py                # Main Gradio app
 
@@ -61,7 +60,7 @@ http://127.0.0.1:7860
 
 
 
-🎯 How It Works
+### 🎯 How It Works
 
 1️⃣ Upload an invoice (PDF).
 
@@ -72,7 +71,7 @@ http://127.0.0.1:7860
 4️⃣ On confirmation, the invoice is posted to ERP.
 
 
-📌 Future Enhancements
+### 📌 Future Enhancements
 
 🔹 Add invoice validation checks (e.g., missing fields, duplicate detection).
 
@@ -83,6 +82,6 @@ http://127.0.0.1:7860
 🔹 Enhance AI model for better invoice understanding.
 
 
-📬 Need Help?
+### 📬 Need Help?
 
 If you have any questions, feel free to reach out to xaviert44@outlook.com! 🚀
