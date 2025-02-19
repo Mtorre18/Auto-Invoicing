@@ -86,6 +86,3 @@ http://127.0.0.1:7860
 
 
 
-###  Need Help?
-
-If you have any questions, feel free to reach out to xaviert44@outlook.com! 🚀
