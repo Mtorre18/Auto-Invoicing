@@ -6,9 +6,8 @@ import json
 import re
 import postInvoice as pi
 
-def parseInvoice(location,name):
+def parseInvoice(location,file_name):
 
-    file_name = os.path.basename(location)
 
     new_file_path = os.path.splitext(file_name)[0] + ".md"
 
@@ -22,7 +21,7 @@ def parseInvoice(location,name):
         with open(f"markdown/{new_file_path}", "w", encoding="utf-8") as f:
             f.write(docs)
 
-    splitter = MarkdownHeaderTextSplitter(
+    splitter = MarkdownHeaderTextSplitter( #for larger documents, modify headers accordingly
                     headers_to_split_on=[
                         ("####", "Header_1"),
                         ("#####", "Header_2"),
@@ -38,10 +37,10 @@ def parseInvoice(location,name):
     summary = """{{
 
         {
-        "VendorNumVendorID": <POPULATE WITH VENDOR NAME>,
+        "Vendor": <POPULATE WITH VENDOR NAME>,
         "InvoiceNum": <POPULATE WITH INVOICE NUMBER>,
-        "REFPONum": <POPULATE WITH PO NUMBER>,
-        "InvoiceAmt": <POPULATE WITH TOTAL COST>,
+        "PONum": <POPULATE WITH PO NUMBER>,
+        "InvoiceAmount": <POPULATE WITH TOTAL COST>,
         }
 
     }}"""  
@@ -60,8 +59,7 @@ def parseInvoice(location,name):
     - Build on the **PREVIOUS RESPONSE** to progressively refine the information from the invoice.
     - Do not add more information than requested.
     - DO NOT CHANGE JSON KEY NAMES, ONLY THEIR VALUES.
-    - The invoice number is not the same as the PO number.
-    - PO Number is usually labeled as 'PO Num', 'PO #' , 'Customer PO No.'.
+
 
     **CURRENT CHUNK:**
     {docs}
@@ -102,8 +100,9 @@ def parseInvoice(location,name):
         try:
             extracted_data = json.loads(json_string)
             
-            ## clean up data before posting to ERP
 
+            ##Enter invoice verification logic here
+            ##For example: query received not invoiced records, filtering on PO
 
             return extracted_data
         except json.JSONDecodeError as e:

@@ -31,10 +31,10 @@ Rate/Price Sub Total Total Paid
 {{
 
         {
-        "VendorNumVendorID": <POPULATE WITH VENDOR NAME>,
+        "Vendor": <POPULATE WITH VENDOR NAME>,
         "InvoiceNum": <POPULATE WITH INVOICE NUMBER>,
-        "REFPONum": <POPULATE WITH PO NUMBER>,
-        "InvoiceAmt": <POPULATE WITH TOTAL COST>,
+        "PONum": <POPULATE WITH PO NUMBER>,
+        "InvoiceAmount": <POPULATE WITH TOTAL COST>,
         }
 
     }}
@@ -44,10 +44,10 @@ Rate/Price Sub Total Total Paid
 --------------Chunk Summary---------------------------------------------------------------------------------
 ```json
 {
-  "VendorNum": "DEMO - Sliced Invoices Suite 5A-1204",
+  "Vendor": "Test Business",
   "InvoiceNum": "INV-3337",
-  "REFPONum": "123 Somewhere Street Your City",
-  "InvoiceAmt": "$93.50"
+  "PONum": "12345",
+  "InvoiceAmount": "$93.50"
 }
 ```
 

@@ -1,6 +1,7 @@
 import gradio as gr
 import invoices as inv
 import postInvoice as pi
+import os
 
 invoice_data = None
 file_name = None
@@ -12,9 +13,11 @@ def process_invoice(uploaded_file):
 
     if uploaded_file:
         file_path = uploaded_file.name
-        invoice_data = inv.parseInvoice(file_path, uploaded_file.name)
-        file_name = uploaded_file.name
-        return f"✅ File '{uploaded_file.name}' uploaded and processed successfully.", invoice_data
+        file_name = os.path.basename(uploaded_file.name)
+        invoice_data = inv.parseInvoice(file_path, file_name)
+        
+
+        return f"✅ File '{file_name}' uploaded and processed successfully.", invoice_data
 
     return "Please upload a file first.", ""
 
