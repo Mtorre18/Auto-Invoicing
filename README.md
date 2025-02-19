@@ -4,11 +4,11 @@ A simple AI-driven application to verify and process invoices using  **Docling**
 
 ## Features
 
-- 1. **Upload Invoices (PDF format) using Gradio UI**.
-- 2. **Convert document to markdown using Docling**.
-- 3. **Extract relevant data with Ollama model**.
-- 4. **User confirmation** before posting the invoice.
-- 5. **ERP Integration** via API for automated invoice posting.
+-  **Upload Invoices (PDF format) using Gradio UI**.
+-  **Convert document to markdown using Docling**.
+-  **Extract relevant data with Ollama model**.
+-  **User confirmation** before posting the invoice.
+-  **ERP Integration** via API for automated invoice posting.
 
 ---
 
